@@ -1,0 +1,45 @@
+{
+  "name": "code-theme",
+  "displayName": "code-theme",
+  "description": "",
+  "version": "0.0.1",
+  "scripts": {
+    "generate": "tsx scripts/generate.ts",
+    "dev": "tsx scripts/watch.ts",
+    "dev:stop": "tsx scripts/stop-watch.ts",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "code theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/code theme-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.30.0",
+    "@types/node": "^24.0.8",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-turbo": "^2.5.4",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.1"
+  }
+}

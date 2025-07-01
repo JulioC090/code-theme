@@ -1,0 +1,31 @@
+// .vscode/tasks.json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "pnpm dev",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "fileLocation": ["absolute"],
+        "pattern": {
+            "regexp": "generic",
+            "file": 1,
+            "line": 2,
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^\\[INFO\\] Starting Watching Mode",
+          "endsPattern": "^\\[INFO\\] Watching for file change"
+        }
+      }
+    },
+    {
+      "label": "stop pnpm dev",
+      "type": "npm",
+      "script": "dev:stop"
+    },
+  ]
+}
