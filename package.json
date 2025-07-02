@@ -4,12 +4,13 @@
   "description": "",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "husky && npm run generate:type",
     "generate": "tsx scripts/generate.ts",
+    "generate:type": "tsx scripts/generate-types.ts",
     "dev": "tsx scripts/watch.ts",
     "dev:stop": "tsx scripts/stop-watch.ts",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "lint:fix": "eslint . --fix"
   },
   "engines": {
     "vscode": "^1.101.0"
@@ -37,6 +38,7 @@
     "eslint-plugin-turbo": "^2.5.4",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
+    "json-schema-to-typescript": "^15.0.4",
     "prettier": "^3.6.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",

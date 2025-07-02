@@ -1,7 +1,9 @@
+import { ColorTheme } from '@/types';
+
 const background = '#171717';
 const foreground = '#ffffff';
 
-export default {
+const theme: ColorTheme = {
   name: 'Meu Tema Customizado',
   type: 'dark',
   colors: {
@@ -18,3 +20,5 @@ export default {
     },
   ],
 };
+
+export default theme;
